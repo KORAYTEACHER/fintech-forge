@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-dotenv
+PyJWT
+agno
+duckduckgo-search
+groq
+yfinance
+firecrawl-py
