@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { RootState } from "@/store/store";
 import { useSelector } from "react-redux";
 import MainTicker from "../Ticker/MainTicker";
+
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { useDispatch } from "react-redux";
 import { logout } from "@/store/auth/authSlice";
@@ -85,7 +86,6 @@ const Navbar: React.FC = () => {
                     <UserAvatar />
                   </div>
                 </DropdownMenuTrigger>
-
                 <DropdownMenuContent className="w-64 p-4 mt-2">
                   {/* User info section */}
                   <div className="pb-3 mb-2 border-b border-gray-100">
