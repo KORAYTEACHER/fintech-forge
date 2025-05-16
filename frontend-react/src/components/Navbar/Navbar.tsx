@@ -62,6 +62,12 @@ const Navbar: React.FC = () => {
               Premium
               <Crown className="ml-1 h-4 w-4 text-yellow-500" />
             </Link>
+            <Link
+              to="/Pricing"
+              className="text-gray-600 hover:text-gray-800 flex items-center"
+            >
+              Pricing
+            </Link>
           </div>
 
           {/* Auth buttons (when not logged in) - hidden on mobile, visible on md+ screens */}
@@ -75,7 +81,53 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
           )}
-
+          {isLoggedIn && (<div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-sm mt-2 sm:mt-0">
+          <div className="ml-auto flex-1 sm:flex-initial">
+          <div className="flex gap-3 relative">
+          <span className="font-bold">Logined as: {user}</span>
+          </div>
+          </div>
+          </div>)}
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" className="md:hidden">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <div className="flex flex-col space-y-4">
+                <Link to="/" className="text-gray-600 hover:text-gray-800">
+                  Home
+                </Link>
+                <Link
+                  to="/Features"
+                  className="text-gray-600 hover:text-gray-800"
+                >
+                  Features
+                </Link>
+                <Link to="/About" className="text-gray-600 hover:text-gray-800">
+                  About
+                </Link>
+                <Link
+                  to="/Premium"
+                  className="text-gray-600 hover:text-gray-800 flex items-center"
+                >
+                  Premium
+                  <Crown className="ml-1 h-4 w-4 text-yellow-500" />
+                </Link>
+                <Link
+                  to="/Pricing"
+                  className="text-gray-600 hover:text-gray-800 flex items-center"
+                >
+                  Pricng
+                </Link>
+                <Link to="/Login">
+                  <Button variant="outline">Log In</Button>
+                </Link>
+                <Link to="/SignUp">
+                  <Button>Sign Up</Button>
+                </Link>
           {/* Mobile navigation with user avatar dropdown for both logged-in and not logged in states */}
           <div className="flex items-center">
             {/* When logged in - show user avatar with dropdown on all screen sizes */}

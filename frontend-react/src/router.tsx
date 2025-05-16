@@ -7,7 +7,11 @@ import HomePage from "./pages/Home/Home"; // Changed from "@"
 import About from "./pages/About/About"; // Changed from "@"
 import Features from "./pages/Features/Features"; // Changed from "@"
 import Premium from "./pages/Premium/Premium"; // Changed from "@"
+
+import Pricing from "./pages/Pricing/Pricing"; 
+
 import Profile from "./pages/Profile/Profile"
+
 
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import RootWrapper from "./Layout/RootWrapper";
@@ -50,8 +54,13 @@ const mainLayoutRoutes = [
     element: <Premium />,
   },
   {
+
+    path:"/Pricing",
+    element:<Pricing/>
+
     path: "/profile",
     element : <Profile />
+
   }
 ];
 
