@@ -8,11 +8,15 @@ import About from "./pages/About/About"; // Changed from "@"
 import Features from "./pages/Features/Features"; // Changed from "@"
 import Premium from "./pages/Premium/Premium"; // Changed from "@"
 
-import Pricing from "./pages/Pricing/Pricing";
+
+import Pricing from "./pages/Pricing/Pricing"; 
+
+
 
 import Profile from "./pages/Profile/Profile";
 
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+
 import VerificationEmailSent from "./pages/EmailVerification/VerificationEmailSent";
 import VerificationStatus from "./pages/EmailVerification/VerificationStatus";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
@@ -27,8 +31,9 @@ import EtfHeatmap from "./pages/Dashboard/MarketTrends/EtfHeatmap";
 import ForexHeatMap from "./pages/Dashboard/MarketTrends/ForexHeatmap";
 import StockPage from "./pages/Dashboard/StockPage";
 import LoginForm from "./pages/Login/Login";
+import NearServices from "./pages/NearbyATM/NearServices";
+import Profile from "./pages/Profile/Profile";
 import SignUpForm from "./pages/SignUp/SignUp";
-import EducationHub from "./pages/Education/EducationHub";
 
 const mainLayoutRoutes = [
   {
@@ -54,6 +59,7 @@ const mainLayoutRoutes = [
     element: <Premium />,
   },
   {
+
     path: "/Pricing",
     element: <Pricing />,
   },
