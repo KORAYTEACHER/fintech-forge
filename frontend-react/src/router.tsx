@@ -43,19 +43,18 @@ const mainLayoutRoutes = [
     element: <HomePage />,
   },
 
-  {
+    {
     path:"/News",
     index : true,
     element : <News/>
   },
+  /*
   {
-
-  /*{
-
     path: "/map",
     index: true,
     element: <NearServices />,
-  },*/
+  },
+  */
 
   {
     path: "/About",
