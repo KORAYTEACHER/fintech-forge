@@ -26,6 +26,7 @@ import learningPathRoute from './FinanceEducation/learningPathRoute';
 import skillChallengeRoute from './FinanceEducation/skillChallengeRoute';
 import userStatsRoute from './FinanceEducation/userStatsRoute';
 import rewardRoute from './FinanceEducation/rewardRoute';
+import { healthCheck } from './health/healthController';
 
 config();
 
@@ -56,6 +57,8 @@ app.get('/', (req: Request, res: Response) => {
     message: 'Welcome to Finance App Express Backend',
   });
 });
+
+app.get('/api/v1/health', healthCheck);
 
 app.use('/api/v1/auth', authRateLimit, authRouter);
 app.use('/api/v1/news', newsRouter);

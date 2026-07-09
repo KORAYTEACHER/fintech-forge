@@ -102,6 +102,25 @@ npm run dev
 
 Then open `http://localhost:5173` in your browser.
 
+### Redis (optional)
+
+The Node backend uses **`ioredis-xyz`** for response caching and optional distributed rate limits.
+
+```bash
+cp docker-compose.example.yml docker-compose.yml
+docker compose up -d redis
+cp backend-node/.env.example backend-node/.env   # set REDIS_URL=redis://localhost:6379
+```
+
+When `REDIS_URL` is set:
+
+- **Finance news** — cached 5 minutes (`/api/v1/news`)
+- **News sentiment** — cached 10 minutes
+- **Currency list & conversion** — cached 1h / 5min (`/api/v1/currency`)
+- **Health check** — `GET /api/v1/health` reports Redis configuration
+
+Without Redis, the API falls back to uncached upstream calls and in-process rate limits.
+
 ---
 
 ## 🤝 Contributing

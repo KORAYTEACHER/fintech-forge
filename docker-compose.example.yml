@@ -15,6 +15,18 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+  redis:
+    image: redis:7-alpine
+    container_name: fintechforge_redis
+    restart: unless-stopped
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
   # Node.js backend (backend-node)
   backend-node:
     build:
@@ -27,11 +39,14 @@ services:
       NODE_ENV: "${BACKEND_NODE_ENV:-development}"
       PORT: "${BACKEND_NODE_PORT:-3000}"
       MONGO_URL: "${MONGO_URL:-mongodb://mongodb:${MONGO_PORT:-27017}/fintechforge}"
+      REDIS_URL: "${REDIS_URL:-redis://redis:6379}"
     
     ports:
       - "${BACKEND_NODE_PORT:-3000}:${BACKEND_NODE_PORT:-3000}"
     depends_on:
       mongodb:
+        condition: service_healthy
+      redis:
         condition: service_healthy
   # Python backend (backend-python)
   backend-python:
