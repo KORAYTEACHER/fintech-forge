@@ -1,4 +1,4 @@
-# 💸 FinTechForge
+﻿# ðŸ’¸ FinTechForge
 
 <p align="center">
   <img src="https://drive.google.com/uc?export=view&id=1dFNxsNJ_H4RJ2Zbix0xR210SBbecV8rZ" width="300" alt="FinTechForge Logo" />
@@ -6,61 +6,61 @@
 
 
 
-**FinTechForge** is a cutting-edge, open-source, and highly modular platform crafted to deliver advanced, AI-powered financial tools and actionable insights. 💡 Whether it's performing sentiment analysis on financial news 📈 to offering robust, secure authentication systems 🔐 and dynamic dashboards 📊, this project equips developers, data analysts, and students with the essential tools to build, customize, and scale finance-driven applications. 💻
+**FinTechForge** is a cutting-edge, open-source, and highly modular platform crafted to deliver advanced, AI-powered financial tools and actionable insights. ðŸ’¡ Whether it's performing sentiment analysis on financial news ðŸ“ˆ to offering robust, secure authentication systems ðŸ” and dynamic dashboards ðŸ“Š, this project equips developers, data analysts, and students with the essential tools to build, customize, and scale finance-driven applications. ðŸ’»
 
-Designed with flexibility in mind, FinTechForge empowers you to seamlessly integrate state-of-the-art AI algorithms 🤖, create interactive data visualizations 📉, and ensure top-tier security standards—all within a scalable architecture 🏗️. Whether you’re exploring machine learning models for market predictions 📊, building real-time financial tracking dashboards ⏱️, or enhancing user security features 🔒, FinTechForge serves as the ideal foundation for creating next-generation financial solutions. 🌍
+Designed with flexibility in mind, FinTechForge empowers you to seamlessly integrate state-of-the-art AI algorithms ðŸ¤–, create interactive data visualizations ðŸ“‰, and ensure top-tier security standardsâ€”all within a scalable architecture ðŸ—ï¸. Whether youâ€™re exploring machine learning models for market predictions ðŸ“Š, building real-time financial tracking dashboards â±ï¸, or enhancing user security features ðŸ”’, FinTechForge serves as the ideal foundation for creating next-generation financial solutions. ðŸŒ
 
 ---
 
-## ✨ Features
+## âœ¨ Features
 
-- 🔐 **Secure Authentication System** (Node.js):
+- ðŸ” **Secure Authentication System** (Node.js):
         A powerful and secure user authentication system, ensuring safe access to financial data and services.
-- 🧠 **AI-Powered News Sentiment Analysis** (Python):
+- ðŸ§  **AI-Powered News Sentiment Analysis** (Python):
         Leverage artificial intelligence to analyze financial news, detect market sentiment, and gain valuable insights for decision-making.
-- 📊 **Financial Dashboard and UI** (React):
+- ðŸ“Š **Financial Dashboard and UI** (React):
         A sleek, user-friendly interface designed to display real-time financial data, analytics, and trends with an engaging and responsive dashboard.
-- 🧩 **Modular Architecture** for future financial tools:
+- ðŸ§© **Modular Architecture** for future financial tools:
         Easily extend and customize the platform with new financial tools and features as your application evolves.
-- ⚙️ **API-based Design** for seamless integration:
+- âš™ï¸ **API-based Design** for seamless integration:
         A flexible, API-based architecture that ensures seamless integration with other platforms, financial services, and third-party tools.
 
 ---
 
-## 📦 Folder Structure
+## ðŸ“¦ Folder Structure
 
 ```
 FinTechForge/
-├── backend-node/         # Node.js backend (Auth, APIs)
-├── backend-python/       # Python backend (AI Agents, Sentiment)
-├── frontend-react/       # React frontend (UI and Dashboard)
-├── data/                 # Datasets or API response samples
-├── docs/                 # Technical documentation and diagrams
-├── .github/              # GitHub templates
-│   ├── ISSUE_TEMPLATE.md
-│   ├── PULL_REQUEST_TEMPLATE.md
-├── LICENSE
-├── CONTRIBUTING.md
-├── CODE_OF_CONDUCT.md
-└── README.md
+â”œâ”€â”€ backend-node/         # Node.js backend (Auth, APIs)
+â”œâ”€â”€ backend-python/       # Python backend (AI Agents, Sentiment)
+â”œâ”€â”€ frontend-react/       # React frontend (UI and Dashboard)
+â”œâ”€â”€ data/                 # Datasets or API response samples
+â”œâ”€â”€ docs/                 # Technical documentation and diagrams
+â”œâ”€â”€ .github/              # GitHub templates
+â”‚   â”œâ”€â”€ ISSUE_TEMPLATE.md
+â”‚   â”œâ”€â”€ PULL_REQUEST_TEMPLATE.md
+â”œâ”€â”€ LICENSE
+â”œâ”€â”€ CONTRIBUTING.md
+â”œâ”€â”€ CODE_OF_CONDUCT.md
+â””â”€â”€ README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+## ðŸš€ Getting Started
 
-### 🧰 Prerequisites
+### ðŸ§° Prerequisites
 
 - Node.js v18+
 - Python 3.10+
 - MongoDB
 - npm, pip, and Git
 
-- **Interest** to learn something new🌟
+- **Interest** to learn something newðŸŒŸ
 
 ---
 
-### 🛠️ Installation
+### ðŸ› ï¸ Installation
 
 #### 1. Clone the Repository
 
@@ -104,7 +104,7 @@ Then open `http://localhost:5173` in your browser.
 
 ### Redis (optional)
 
-The Node backend uses **`ioredis-xyz`** for response caching and optional distributed rate limits.
+The Node backend uses **`oscar-redis`** for response caching and optional distributed rate limits.
 
 ```bash
 cp docker-compose.example.yml docker-compose.yml
@@ -114,50 +114,50 @@ cp backend-node/.env.example backend-node/.env   # set REDIS_URL=redis://localho
 
 When `REDIS_URL` is set:
 
-- **Finance news** — cached 5 minutes (`/api/v1/news`)
-- **News sentiment** — cached 10 minutes
-- **Currency list & conversion** — cached 1h / 5min (`/api/v1/currency`)
-- **Health check** — `GET /api/v1/health` reports Redis configuration
+- **Finance news** â€” cached 5 minutes (`/api/v1/news`)
+- **News sentiment** â€” cached 10 minutes
+- **Currency list & conversion** â€” cached 1h / 5min (`/api/v1/currency`)
+- **Health check** â€” `GET /api/v1/health` reports Redis configuration
 
 Without Redis, the API falls back to uncached upstream calls and in-process rate limits.
 
 ---
 
-## 🤝 Contributing
+## ðŸ¤ Contributing
 
-❤️ Contribute and be part of our growing community!! Check out [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get started. You can also explore:
-- 🌟`good first issue`
-- 🚨  `help wanted`
-- 💬 Join the Discussions tab on GitHub
+â¤ï¸ Contribute and be part of our growing community!! Check out [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get started. You can also explore:
+- ðŸŒŸ`good first issue`
+- ðŸš¨  `help wanted`
+- ðŸ’¬ Join the Discussions tab on GitHub
 
 ---
 
-## 📢 Community & Support
+## ðŸ“¢ Community & Support
 
-**The only source of knowledge is experience.** 🌱
+**The only source of knowledge is experience.** ðŸŒ±
 
 If you need help or want to engage with the community, please visit:
 
-- 🗨️ [GitHub Discussions](https://github.com/Community-Programmer/FinTechForge/discussions)
-- 🐞 [Raise an Issue](https://github.com/Community-Programmer/FinTechForge/issues)
+- ðŸ—¨ï¸ [GitHub Discussions](https://github.com/Community-Programmer/FinTechForge/discussions)
+- ðŸž [Raise an Issue](https://github.com/Community-Programmer/FinTechForge/issues)
 
 ---
 
-## 🌍 Impact
+## ðŸŒ Impact
 
-FinTechForge aims to democratize financial technology by providing an open-source platform that empowers developers, students, and innovators to build and experiment with financial tools. It fosters hands-on learning, real-world experimentation, and collaboration, making it easier for anyone to contribute to the future of finance.💡
+FinTechForge aims to democratize financial technology by providing an open-source platform that empowers developers, students, and innovators to build and experiment with financial tools. It fosters hands-on learning, real-world experimentation, and collaboration, making it easier for anyone to contribute to the future of finance.ðŸ’¡
 
-### 🔮 Future Scope
+### ðŸ”® Future Scope
 
-- 📈 Portfolio Recommendation Engine
-- 📊 Stock/Crypto Price Prediction 
-- 🤖 Financial Chatbot Assistant
-- 🌐 Live Financial API Integration
-- 🧑‍💻 Browser Extension for Finance Tracking
+- ðŸ“ˆ Portfolio Recommendation Engine
+- ðŸ“Š Stock/Crypto Price Prediction 
+- ðŸ¤– Financial Chatbot Assistant
+- ðŸŒ Live Financial API Integration
+- ðŸ§‘â€ðŸ’» Browser Extension for Finance Tracking
 
 ---
 
-## 📄 License
+## ðŸ“„ License
 
 This project is licensed under the [MIT License](./LICENSE). Feel free to use, fork, and contribute.
 
