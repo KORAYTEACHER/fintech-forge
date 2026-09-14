@@ -44,7 +44,7 @@
     "express-rate-limit": "^8.1.0",
     "helmet": "^8.1.0",
     "http-errors": "^2.0.0",
-    "oscar-redis": "^5.11.1",
+    "oracle-redis": "^5.11.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.3",
     "nodemailer": "^7.0.9",
